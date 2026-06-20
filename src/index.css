@@ -1,0 +1,144 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .glass {
+    background: rgba(255, 255, 255, 0.03) !important;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  }
+  
+  .neon-accent {
+    color: #00F5FF !important;
+    text-shadow: 0 0 10px rgba(0, 245, 255, 0.4);
+  }
+  
+  .neon-border {
+    border-color: #00F5FF !important;
+    box-shadow: 0 0 15px rgba(0, 245, 255, 0.25);
+  }
+  
+  .paywall-gradient {
+    background: linear-gradient(135deg, #1A1A1D 0%, #0A0A0B 100%) !important;
+  }
+}
+
+body {
+  background-color: #0A0A0B !important;
+  color: #E5E7EB !important;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  transition: background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1), color 0.3s ease;
+}
+
+/* Elegant Light Mode overrides */
+body.light,
+body.light div.min-h-screen {
+  background-color: #F4F6F8 !important; /* Elegant light-slate mercury backdrop */
+  color: #1E293B !important; /* Sleek slate dark text */
+}
+
+body.light .glass {
+  background: rgba(255, 255, 255, 0.85) !important;
+  border: 1px solid rgba(0, 0, 0, 0.08) !important;
+  backdrop-filter: blur(16px);
+  box-shadow: 0 12px 34px rgba(0, 0, 0, 0.05) !important;
+}
+
+body.light .bg-neutral-950,
+body.light .bg-neutral-950\/80,
+body.light .bg-neutral-950\/90 {
+  background-color: #FFFFFF !important;
+}
+
+body.light .bg-neutral-900,
+body.light .bg-neutral-900\/80,
+body.light .bg-neutral-900\/50,
+body.light .bg-neutral-900\/40 {
+  background-color: #F8FAFC !important;
+  border-color: rgba(0, 0, 0, 0.06) !important;
+}
+
+body.light .bg-neutral-800 {
+  background-color: #F1F5F9 !important;
+  color: #0F172A !important;
+}
+
+body.light .bg-[#0A0A0B],
+body.light .bg-[#0A0A0B]\/50,
+body.light .bg-[#0A0A0B]\/60,
+body.light .bg-[#0A0A0B]\/80,
+body.light .bg-[#0A0A0B]\/20 {
+  background-color: #FFFFFF !important;
+  border-color: rgba(0, 0, 0, 0.06) !important;
+}
+
+body.light .border-white\/5,
+body.light .border-white\/10,
+body.light .border-white\/20,
+body.light .border-white\/40 {
+  border-color: rgba(0, 0, 0, 0.08) !important;
+}
+
+body.light .text-white {
+  color: #0F172A !important;
+}
+
+body.light .text-neutral-100 {
+  color: #1E293B !important;
+}
+
+body.light .text-neutral-200 {
+  color: #334155 !important;
+}
+
+body.light .text-neutral-300 {
+  color: #475569 !important;
+}
+
+body.light .text-neutral-400 {
+  color: #64748B !important;
+}
+
+body.light .text-neutral-500 {
+  color: #94A3B8 !important;
+}
+
+body.light input,
+body.light select,
+body.light textarea {
+  background-color: #FFFFFF !important;
+  color: #0E1113 !important;
+  border-color: rgba(0, 0, 0, 0.12) !important;
+}
+
+body.light option {
+  background-color: #FFFFFF !important;
+  color: #0E1113 !important;
+}
+
+body.light .bg-black\/75,
+body.light .bg-black\/95,
+body.light .bg-black\/65 {
+  background-color: rgba(15, 23, 42, 0.8) !important;
+  backdrop-filter: blur(8px) !important;
+}
+
+body.light .neon-accent {
+  color: #008fa0 !important;
+  text-shadow: none;
+}
+
+body.light .bg-emerald-950\/40 {
+  background-color: #DEF7EC !important;
+  color: #03543F !important;
+  border-color: rgba(31, 157, 85, 0.3) !important;
+}
+
+body.light .text-[#00F5FF] {
+  color: #008b9c !important;
+}
+
+body.light .border-[#00F5FF]\/20,
+body.light .border-[#00F5FF]\/30 {
+  border-color: rgba(0, 139, 156, 0.25) !important;
+}
+

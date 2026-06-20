@@ -1,0 +1,6 @@
+{
+  "name": "Lwach",
+  "description": "A gamified peer-to-peer item swapping platform with a swipe-to-trade discovery feed, value-tier matching, blind box mode, and a secure escrow paywall unlock system.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

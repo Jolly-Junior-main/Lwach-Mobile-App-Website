@@ -1,0 +1,104 @@
+{
+  "entities": {
+    "User": {
+      "title": "User",
+      "description": "Simulated user directory profiles.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "full_name": { "type": "string" },
+        "username": { "type": "string" },
+        "password": { "type": "string" },
+        "phone_number": { "type": "string" },
+        "rating": { "type": "string" },
+        "created_at": { "type": "string" }
+      },
+      "required": ["id", "full_name", "username", "password"]
+    },
+    "Item": {
+      "title": "Item",
+      "description": "Listed item for swap discovery.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "user_id": { "type": "string" },
+        "title": { "type": "string" },
+        "description": { "type": "string" },
+        "value_tier": { "type": "string" },
+        "images": { "type": "array" },
+        "category": { "type": "string" },
+        "is_active": { "type": "boolean" }
+      },
+      "required": ["id", "user_id", "title"]
+    },
+    "Swipe": {
+      "title": "Swipe",
+      "description": "Interactive swiping action records.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "swiper_item_id": { "type": "string" },
+        "target_item_id": { "type": "string" },
+        "action_type": { "type": "string" },
+        "bundle_item_ids": { "type": "array" },
+        "cash_topup": { "type": "number" },
+        "created_at": { "type": "string" }
+      },
+      "required": ["id", "swiper_item_id", "target_item_id", "action_type"]
+    },
+    "Match": {
+      "title": "Match",
+      "description": "Matched items escrow and discovery record.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "item_a_id": { "type": "string" },
+        "item_b_id": { "type": "string" },
+        "party_a_paid": { "type": "boolean" },
+        "party_b_paid": { "type": "boolean" },
+        "payment_links": { "type": "object" },
+        "is_unlocked": { "type": "boolean" },
+        "bundle_item_ids_a": { "type": "array" },
+        "cash_topup_a": { "type": "number" },
+        "created_at": { "type": "string" },
+        "logistics": { "type": "object" }
+      },
+      "required": ["id", "item_a_id", "item_b_id"]
+    },
+    "Message": {
+      "title": "Message",
+      "description": "Simulated match realtime chat messaging logs.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "match_id": { "type": "string" },
+        "sender_id": { "type": "string" },
+        "content": { "type": "string" },
+        "created_at": { "type": "string" }
+      },
+      "required": ["id", "match_id", "sender_id", "content"]
+    }
+  },
+  "firestore": {
+    "users": {
+      "schema": "User",
+      "description": "Directory of Lwach Swapping app simulated profiles."
+    },
+    "items": {
+      "schema": "Item",
+      "description": "User barter item listings."
+    },
+    "swipes": {
+      "schema": "Swipe",
+      "description": "Barter decision swiping actions."
+    },
+    "matches": {
+      "schema": "Match",
+      "description": "Successful barter match instances with built-in Telebirr escrow status."
+    },
+    "messages": {
+      "schema": "Message",
+      "description": "Direct communication logs between peer matched members."
+    }
+  }
+}
